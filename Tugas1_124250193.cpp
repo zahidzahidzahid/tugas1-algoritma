@@ -13,7 +13,7 @@ struct Produk {
 Produk arr[100];
 int n = 0;
 
-// ================= FILE HANDLING =================
+// Handling
 void loadFile() {
     FILE *file = fopen("lelele.csv", "r");
     if (file == NULL) return;
@@ -41,7 +41,6 @@ void saveFile() {
     fclose(file);
 }
 
-// ================= CRUD =================
 void tambahProduk() {
     if (n >= 100) {
         cout << "Data penuh!\n";
@@ -91,7 +90,7 @@ void tampil() {
     }
 }
 
-// ================= SORTING =================
+// Fungsi Sorting
 void bubbleSort() {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -122,7 +121,7 @@ void quickSort(int low, int high) {
     if (i < high) quickSort(i, high);
 }
 
-// ================= SEARCHING =================
+// Fungsi Search
 void sequentialSearch(char cari[]) {
     bool found = false;
 
@@ -164,7 +163,7 @@ void binarySearch(char cari[]) {
     cout << "Produk tidak ditemukan!\n";
 }
 
-// ================= MAIN =================
+// Fungsi Main
 int main() {
     int pilih;
     char cari[50];
